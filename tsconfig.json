@@ -1,20 +1,33 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "target": "es5",
-    "lib": ["es2015", "es6", "esnext", "dom"],
-    "allowJs": true,
-    "sourceMap": true,
     "baseUrl": ".",
     "outDir": "dist",
     "paths": {
       "@/*": ["src/*"]
     },
+    "jsx": "react-jsx",
+    "keyofStringsOnly": true,
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "keyofStringsOnly": true
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["./src/**/*"],
-  "exclude": ["./node_modules/**/*"]
+  "exclude": ["./node_modules/**/*", "dist", "test"]
 }
