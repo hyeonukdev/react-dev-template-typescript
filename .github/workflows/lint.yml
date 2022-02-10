@@ -26,9 +26,10 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - name: Install packages
-        run: npm ci
-      - name: Prettier
-        run: npm run format
-      - name: Lint
-        run: npm run lint
+      - name: Install yarn
+        run: |
+          npm install -g yarn
+          yarn install
+      - name: Analyzing the code with eslint
+        run: |
+          ./node_modules/.bin/eslint --cache=true ./src/**
