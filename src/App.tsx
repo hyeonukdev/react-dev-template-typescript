@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { GlobalStyle } from './themes/global-styles'
-import { lightTheme, darkTheme } from './themes/theme'
+import { GlobalStyle } from './global-styles'
+import { lightTheme, darkTheme } from './theme'
 
 const App = () => {
   const [themeMode, setThemeMode] = useState('light')
