@@ -9,6 +9,7 @@
     "react/jsx-filename-extension": [2, { "extensions": [".ts", ".tsx"] }],
     "import/extensions": "off",
     "import/no-unresolved": "off",
+    "implicit-arrow-linebreak": "off",
     "no-unused-vars": "warn",
     "import/newline-after-import": "off",
     "no-use-before-define": "off",
