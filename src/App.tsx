@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { RecoilRoot } from 'recoil'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './global-styles'
 import { lightTheme, darkTheme } from './theme'
@@ -10,13 +11,18 @@ const App = () => {
     setThemeMode(themeMode === 'light' ? 'dark' : 'light')
 
   return (
-    <ThemeProvider theme={styledTheme}>
-      <GlobalStyle />
-      <button style={{ height: '30px', width: '100px' }} onClick={toggleTheme}>
-        Dark Mode!
-      </button>
-      <footer />
-    </ThemeProvider>
+    <RecoilRoot>
+      <ThemeProvider theme={styledTheme}>
+        <GlobalStyle />
+        <button
+          style={{ height: '30px', width: '100px' }}
+          onClick={toggleTheme}
+        >
+          Dark Mode!
+        </button>
+        <footer />
+      </ThemeProvider>
+    </RecoilRoot>
   )
 }
 
