@@ -3,6 +3,8 @@ import { RecoilRoot } from 'recoil'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './global-styles'
 import { lightTheme, darkTheme } from './theme'
+import ReadWriteCount from './components/ReadWriteCount'
+import ReadOnlyCount from './components/ReadOnlyCount'
 
 const App = () => {
   const [themeMode, setThemeMode] = useState('light')
@@ -14,13 +16,20 @@ const App = () => {
     <RecoilRoot>
       <ThemeProvider theme={styledTheme}>
         <GlobalStyle />
-        <button
-          style={{ height: '30px', width: '100px' }}
-          onClick={toggleTheme}
-        >
-          Dark Mode!
-        </button>
-        <footer />
+        <div>
+          <button
+            style={{ height: '30px', width: '100px' }}
+            onClick={toggleTheme}
+          >
+            Dark Mode!
+          </button>
+        </div>
+
+        <div style={{ border: '1px solid red' }}>
+          <ReadOnlyCount />
+          <br />
+          <ReadWriteCount />
+        </div>
       </ThemeProvider>
     </RecoilRoot>
   )
