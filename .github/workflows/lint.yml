@@ -36,4 +36,4 @@ jobs:
 
       - name: Analyzing the code with eslint
         run: |
-          ./node_modules/.bin/eslint --cache=true ./src
+          ./node_modules/.bin/eslint --cache=true ./src/**/*.{ts,tsx}
