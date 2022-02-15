@@ -3,8 +3,7 @@ import { RecoilRoot } from 'recoil'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './global-styles'
 import { lightTheme, darkTheme } from './theme'
-import ReadWriteCount from './components/ReadWriteCount'
-import ReadOnlyCount from './components/ReadOnlyCount'
+import SelectorCount from './components/examples/SelectorCount'
 
 const App = () => {
   const [themeMode, setThemeMode] = useState('light')
@@ -26,9 +25,7 @@ const App = () => {
         </div>
 
         <div style={{ border: '1px solid red' }}>
-          <ReadOnlyCount />
-          <br />
-          <ReadWriteCount />
+          <SelectorCount />
         </div>
       </ThemeProvider>
     </RecoilRoot>

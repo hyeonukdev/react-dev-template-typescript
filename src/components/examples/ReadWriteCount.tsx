@@ -1,5 +1,5 @@
 import { useRecoilState, useSetRecoilState, useResetRecoilState } from 'recoil'
-import { countState } from '../atom/count'
+import { countState } from '../../atom/count'
 
 function ReadWriteCount() {
   const [count, setCount] = useRecoilState(countState) // useRecoilState 을 통한 value, setter 반환
