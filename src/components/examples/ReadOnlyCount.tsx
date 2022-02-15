@@ -1,5 +1,5 @@
 import { useRecoilValue } from 'recoil'
-import { countState } from '../atom/count'
+import { countState } from '../../atom/count'
 
 function ReadOnlyCount() {
   const count = useRecoilValue(countState) // 구독하는 atom 의 값만 반환
