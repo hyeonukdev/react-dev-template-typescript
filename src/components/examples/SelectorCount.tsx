@@ -1,10 +1,10 @@
-import { useRecoilState, useRecoilValue } from 'recoil'
+import { useRecoilState } from 'recoil'
 import { countState, inputState, countInputState } from '../../atom/count'
 
 function SelectorCount() {
   const [count, setCount] = useRecoilState(countState) // useRecoilState 을 통한 value, setter 반환
   const [input, setInput] = useRecoilState(inputState) // useRecoilState 을 통한 value, setter 반환
-  const countInput = useRecoilValue(countInputState) // useRecoilValue 을 통한 selector 의 get value 반환
+  const [countInput, setCountInput] = useRecoilState(countInputState)
 
   return (
     <div>
@@ -14,6 +14,9 @@ function SelectorCount() {
       <input value={input} onChange={(e) => setInput(e.target.value)} />
       <button onClick={() => setCount(count + 1)}>숫자 증가</button>
       <button onClick={() => setCount(count - 1)}>숫자 감소</button>
+      <button onClick={() => setCountInput('9999')}>
+        selector 값 9999로 변경
+      </button>
     </div>
   )
 }
