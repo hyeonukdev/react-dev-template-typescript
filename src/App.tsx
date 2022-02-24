@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import { RecoilRoot } from 'recoil'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './global-styles'
 import { lightTheme, darkTheme } from './theme'
-import SelectorCount from './components/examples/SelectorCount'
 
 const App = () => {
   const [themeMode, setThemeMode] = useState('light')
@@ -12,23 +10,17 @@ const App = () => {
     setThemeMode(themeMode === 'light' ? 'dark' : 'light')
 
   return (
-    <RecoilRoot>
-      <ThemeProvider theme={styledTheme}>
-        <GlobalStyle />
-        <div>
-          <button
-            style={{ height: '30px', width: '100px' }}
-            onClick={toggleTheme}
-          >
-            Dark Mode!
-          </button>
-        </div>
-
-        <div style={{ border: '1px solid red' }}>
-          <SelectorCount />
-        </div>
-      </ThemeProvider>
-    </RecoilRoot>
+    <ThemeProvider theme={styledTheme}>
+      <GlobalStyle />
+      <div>
+        <button
+          style={{ height: '30px', width: '100px' }}
+          onClick={toggleTheme}
+        >
+          Dark Mode!
+        </button>
+      </div>
+    </ThemeProvider>
   )
 }
 
