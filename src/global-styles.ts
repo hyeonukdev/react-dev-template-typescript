@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { color } from './config/theme'
-import { IThemeInterface } from './interfaces'
+import { IThemeInterface } from './context/ThemeContext'
 
 export const GlobalStyle = createGlobalStyle<IThemeInterface>`
   *,
@@ -139,17 +139,17 @@ export const GlobalStyle = createGlobalStyle<IThemeInterface>`
     border-collapse: collapse;
     border-spacing: 0;
   }
-  button {
-    background: inherit;
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
-    overflow: visible;
-  }
+  // button {
+  //   background: inherit;
+  //   border: none;
+  //   box-shadow: none;
+  //   border-radius: 0;
+  //   padding: 0;
+  //   overflow: visible;
+  // }
   body{
     font-family: 'Nanum Gothic', sans-serif;
-    //background: ${({ theme }) => theme.body};
+    background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     transition: background 0.5s ease-in-out;
     transition: color 0.5s ease-in-out;
@@ -160,14 +160,14 @@ export const GlobalStyle = createGlobalStyle<IThemeInterface>`
         color: ${color.default.mainColor};
     }
   }
-  button{
-    cursor: pointer;
-    background-color: white;
-    outline: none;
-    border: none;
-    &:active {
-    }
-  }
+  // button{
+  //   cursor: pointer;
+  //   background-color: white;
+  //   outline: none;
+  //   border: none;
+  //   &:active {
+  //   }
+  // }
   /* animations */
   @keyframes spin {
     0% {

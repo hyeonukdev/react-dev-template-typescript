@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ThemeToggleSwitch from '../components/ThemeToggleSwitch'
 
 function Home() {
   const [text, setText] = useState('')
@@ -11,6 +12,7 @@ function Home() {
   }
   return (
     <>
+      <ThemeToggleSwitch />
       <h1>To Do</h1>
       <form onSubmit={onSubmit}>
         <input type="text" value={text} onChange={onChange} />
