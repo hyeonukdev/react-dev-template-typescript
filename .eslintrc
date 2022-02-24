@@ -3,7 +3,7 @@
   "extends": ["airbnb"],
   "rules": {
     "quotes": "off",
-    "semi": "off",
+    "semi": ["off", "always"],
     "no-undef": "off",
     "arrow-body-style": "off",
     "react/jsx-filename-extension": [2, { "extensions": [".ts", ".tsx"] }],
@@ -26,6 +26,7 @@
     "react/jsx-one-expression-per-line": "off",
     "react/no-unescaped-entities": "off",
     "func-call-spacing": "off",
-    "no-spaced-func": "off"
+    "no-spaced-func": "off",
+    "no-unused-expressions": "off"
   }
 }
