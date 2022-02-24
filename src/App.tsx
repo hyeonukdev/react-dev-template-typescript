@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { HashRouter } from 'react-router-dom'
 import { GlobalStyle } from './global-styles'
 import { lightTheme, darkTheme } from './theme'
+import Router from './Router'
 
 const App = () => {
   const [themeMode, setThemeMode] = useState('light')
@@ -12,14 +14,9 @@ const App = () => {
   return (
     <ThemeProvider theme={styledTheme}>
       <GlobalStyle />
-      <div>
-        <button
-          style={{ height: '30px', width: '100px' }}
-          onClick={toggleTheme}
-        >
-          Dark Mode!
-        </button>
-      </div>
+      <HashRouter>
+        <Router />
+      </HashRouter>
     </ThemeProvider>
   )
 }
