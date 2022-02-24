@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 function Home() {
   const [text, setText] = useState('')
-  function onChange(e) {
+  function onChange(e: any) {
     setText(e.target.value)
   }
-  function onSubmit(e) {
+  function onSubmit(e: any) {
     e.preventDefault()
     setText('')
   }
