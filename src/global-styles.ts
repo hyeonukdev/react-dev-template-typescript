@@ -139,14 +139,14 @@ export const GlobalStyle = createGlobalStyle<IThemeInterface>`
     border-collapse: collapse;
     border-spacing: 0;
   }
-  // button {
-  //   background: inherit;
-  //   border: none;
-  //   box-shadow: none;
-  //   border-radius: 0;
-  //   padding: 0;
-  //   overflow: visible;
-  // }
+  button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+  }
   body{
     font-family: 'Nanum Gothic', sans-serif;
     background: ${({ theme }) => theme.body};
@@ -160,14 +160,14 @@ export const GlobalStyle = createGlobalStyle<IThemeInterface>`
         color: ${color.default.mainColor};
     }
   }
-  // button{
-  //   cursor: pointer;
-  //   background-color: white;
-  //   outline: none;
-  //   border: none;
-  //   &:active {
-  //   }
-  // }
+  button{
+    cursor: pointer;
+    background-color: white;
+    outline: none;
+    border: none;
+    &:active {
+    }
+  }
   /* animations */
   @keyframes spin {
     0% {
