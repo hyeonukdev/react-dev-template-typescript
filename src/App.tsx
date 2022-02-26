@@ -5,6 +5,7 @@ import Router from './Router'
 import { themeList } from './config/theme'
 import ThemeContext from './context/ThemeContext'
 import { LIGHT } from './constants/Theme'
+import 'antd/dist/antd.css'
 
 const App = () => {
   const [theme, setTheme] = useState<THEME>(LIGHT)
