@@ -36,6 +36,7 @@
         "controlComponents": ["CustomInput"],
         "depth": 3
       }
-    ]
+    ],
+    "global-require": "off"
   }
 }
