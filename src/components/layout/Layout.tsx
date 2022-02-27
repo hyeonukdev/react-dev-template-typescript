@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 
-const Layout = ({ children }) => <Wrapper>{children}</Wrapper>
+interface Props {
+  children: any
+}
 
+const Layout = ({ children }: Props) => <Wrapper>{children}</Wrapper>
 const Wrapper = styled.div`
   padding-top: 60px; /* 헤더 높이 */
 `
