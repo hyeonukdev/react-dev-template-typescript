@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { HashRouter } from 'react-router-dom'
+import { hot } from 'react-hot-loader'
 import { GlobalStyle } from './global-styles'
 import Router from './Router'
 import { themeList } from './config/theme'
@@ -20,4 +21,4 @@ const App = () => {
   )
 }
 
-export default App
+export default hot(module)(App)
