@@ -160,6 +160,9 @@ export const GlobalStyle = createGlobalStyle<IThemeInterface>`
         color: ${color.default.mainColor};
     }
   }
+  span {
+    color: ${({ theme }) => theme.text};
+  }
   button{
     cursor: pointer;
     background-color: white;

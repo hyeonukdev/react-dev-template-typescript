@@ -13,7 +13,6 @@ Layout.Main = styled.div`
   width: 100%;
   height: 740px;
   position: relative;
-  background: yellow;
 `
 
 export default Layout

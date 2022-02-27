@@ -1,6 +1,14 @@
 import styled from 'styled-components'
+import ThemeToggleSwitch from '../ThemeToggleSwitch'
 
-const Header = () => <Wrapper>Header</Wrapper>
+const Header = () => (
+  <Wrapper>
+    <div>
+      <span>Logo</span>
+      <ThemeToggleSwitch />
+    </div>
+  </Wrapper>
+)
 
 const Wrapper = styled.div`
   /* 레이아웃 */
@@ -14,7 +22,6 @@ const Wrapper = styled.div`
   z-index: 5;
 
   /* 색상 */
-  background: gray;
   color: white;
   border-bottom: 1px solid black;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);

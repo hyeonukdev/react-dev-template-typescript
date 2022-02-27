@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 const Footer = () => (
   <Wrapper>
-    <div className="footer">© My Company Name.</div>
+    <div className="footer">
+      <span>© 2022 hyeonukdev.</span>
+    </div>
   </Wrapper>
 )
 
@@ -17,7 +19,6 @@ const Wrapper = styled.div`
   z-index: 5;
 
   /* 색상 */
-  background: black;
   color: white;
   border-bottom: 1px solid black;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
