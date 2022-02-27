@@ -10,10 +10,10 @@ const Wrapper = styled.div`
 `
 Layout.Main = styled.div`
   margin: 0 auto;
-  margin-top: 2rem;
-  width: 1200px;
+  width: 100%;
+  height: 700px;
   position: relative;
-  background: gray;
+  background: yellow;
 `
 
 export default Layout
