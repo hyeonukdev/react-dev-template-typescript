@@ -11,9 +11,5 @@ module.exports = merge(config, {
     open: true,
     hot: true,
     historyApiFallback: true
-  },
-  options: {
-    cacheDirectory: true,
-    plugins: ['react-hot-loader/babel']
   }
 })
