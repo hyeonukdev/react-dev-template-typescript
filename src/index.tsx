@@ -2,10 +2,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { AppContainer } from 'react-hot-loader'
 import App from './App'
-import { configureStore } from './store'
-
-// prepare store
-const store = configureStore()
+import store from './store/store'
 
 const rootElement = document.getElementById('root')
 ReactDOM.render(
